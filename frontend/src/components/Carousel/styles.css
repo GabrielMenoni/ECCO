@@ -1,0 +1,19 @@
+.slick-slider {
+    width: 758px;
+}
+
+.slick-dots {
+    background-color: transparent;
+}
+
+.slick-dots li button:before {
+    font-size: 1.2rem;
+    line-height: 0;
+    top: -20px;
+    color: black;
+}
+
+.slick-dots li.slick-active button:before {
+    color: #252E24;
+    opacity: 1;
+}

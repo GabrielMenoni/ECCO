@@ -1,0 +1,15 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="640" height="640">
+	<title>Novo Projeto</title>
+	<defs>
+		<image width="566" height="512" id="img1" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTY2IiBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDU2NiA1MTIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxjaXJjbGUgY3g9IjMxOS41IiBjeT0iMzE5LjUiIHI9IjMxNyIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLW9wYWNpdHk9IjAuMyIgc3Ryb2tlLXdpZHRoPSI1Ii8+Cjwvc3ZnPgo="/>
+		<image width="447" height="427" id="img2" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDQ3IiBoZWlnaHQ9IjQyNyIgdmlld0JveD0iMCAwIDQ0NyA0MjciIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxjaXJjbGUgY3g9IjIzNC4yMDciIGN5PSIyMzQuMjA3IiByPSIyMzEuNzMyIiBzdHJva2U9IndoaXRlIiBzdHJva2Utb3BhY2l0eT0iMC41IiBzdHJva2Utd2lkdGg9IjQiLz4KPC9zdmc+Cg=="/>
+		<image width="354" height="354" id="img3" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzU0IiBoZWlnaHQ9IjM1NCIgdmlld0JveD0iMCAwIDM1NCAzNTQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxjaXJjbGUgY3g9IjE3Ny4wMDIiIGN5PSIxNzYuOTk4IiByPSIxNzUuMDUzIiBzdHJva2U9IndoaXRlIiBzdHJva2Utb3BhY2l0eT0iMC44IiBzdHJva2Utd2lkdGg9IjMiLz4KPC9zdmc+Cg=="/>
+		<image width="238" height="238" id="img4" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjM4IiBoZWlnaHQ9IjIzOCIgdmlld0JveD0iMCAwIDIzOCAyMzgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxjaXJjbGUgY3g9IjExOS4wMDIiIGN5PSIxMTguOTk4IiByPSIxMTcuMzciIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMiIvPgo8L3N2Zz4K"/>
+	</defs>
+	<style>
+	</style>
+	<use id="Ellipse 5" href="#img1" transform="matrix(1,0,0,1,74,128)"/>
+	<use id="Ellipse 4" href="#img2" transform="matrix(1,0,0,1,193,213)"/>
+	<use id="Ellipse 6" href="#img3" transform="matrix(1,0,0,1,170,264)"/>
+	<use id="Ellipse 7" href="#img4" transform="matrix(1,0,0,1,226,320)"/>
+</svg>

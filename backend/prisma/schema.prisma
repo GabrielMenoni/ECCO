@@ -1,0 +1,112 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// Models
+
+model Usuario {
+  id                    String       @id @default(uuid())
+  nome                  String
+  email                 String       @unique
+  senha                 String
+  celular               String
+  avaliacao             Float
+  fotoFrenteDocumento   String
+  fotoVersoDocumento    String
+  tipoDocumento         String
+  verificado            Boolean
+  fotoPerfil            String
+
+  servicos              Servico[]
+  reservas              Reserva[]
+  mensagens             Mensagem[]
+}
+
+model Categoria {
+  id            String         @id @default(uuid())
+  nome          String
+
+  subcategorias Subcategoria[]// One-to-many relationship with Subcategoria
+}
+
+model Subcategoria {
+  id            String         @id @default(uuid())
+  nome          String
+  categoriaId   String
+
+  categoria     Categoria      @relation(fields: [categoriaId], references: [id], onDelete: Cascade) // Foreign key relationship
+  servicos      Servico[]
+}
+
+model Servico {
+  id                String         @id @default(uuid())
+  momentoCriacao    String 
+  precoFixo         Float?
+  precoMin          Float?
+  precoMax          Float?
+  subcategoriaId    String
+  usuarioId         String
+  
+  subcategoria      Subcategoria   @relation(fields: [subcategoriaId], references: [id])
+  usuario           Usuario        @relation(fields: [usuarioId], references: [id])
+  diasServico       DiaServico[]
+  reservas          Reserva[]
+}
+
+
+model DiaServico {
+  id                String         @id @default(uuid())
+  data              String
+  periodo           String
+  servicoId         String 
+
+  servico           Servico        @relation(fields: [servicoId], references: [id])
+}
+
+model Reserva {
+  id                          String         @id @default(uuid())
+  status                      String
+  notaAvaliacaoParaCliente    Float
+  comentarioAvaliacaoParaCliente String
+  notaAvaliacaoParaPrestador  Float
+  comentarioAvaliacaoParaPrestador String
+  dataSolicitacao             String
+  comentario                  String
+  cep                         String
+  estado                      String
+  cidade                      String
+  bairro                      String
+  rua                         String
+  numero                      Int
+  horarioInicio               String
+  motivoRejeicao              String?
+  horarioFim                  String
+  servicoId                   String 
+  usuarioId                   String
+
+  usuario                     Usuario        @relation(fields: [usuarioId], references: [id])
+  servico                     Servico        @relation(fields: [servicoId], references: [id])
+  mensagens                   Mensagem[]
+}
+
+model Mensagem {
+  id                String         @id @default(uuid())
+  momento           String
+  conteudo          String
+  reservaId         String
+  usuarioId         String
+
+  usuario           Usuario        @relation(fields: [usuarioId], references: [id])
+  reserva           Reserva        @relation(fields: [reservaId], references: [id])
+}

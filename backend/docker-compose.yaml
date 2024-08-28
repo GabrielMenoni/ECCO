@@ -1,0 +1,18 @@
+# sudo docker run --name api-solid-pg -e POSTGRESQL_USERNAME=docker -e POSTGRESQL_PASSWORD=docker -e POSTGRESQL_DATABASE=apisolid -p 5432:5432 bitnami/postgresql
+# To install the db:     $ sudo docker compose up -d
+# To uninstall the db:    $ sudo docker compose down
+# To stop running the db: $ sudo docker compose stop
+# DATABASE_URL="postgresql://docker:docker@localhost:5432/apisolid"
+
+
+version: '3'
+
+services:
+  api-solid-pg:
+    image: bitnami/postgresql
+    ports: 
+      - 5432:5432
+    environment:
+      - POSTGRESQL_USERNAME=docker
+      - POSTGRESQL_PASSWORD=docker
+      - POSTGRESQL_DATABASE=apisolid
