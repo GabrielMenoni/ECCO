@@ -5,6 +5,8 @@ The website was developed as a trainee project for our entry into the junior ent
 
 !!! The project was not completed due to the need to conclude the trainee period, some parts are not finished and don't represent the final product
 
+Project figma: https://www.figma.com/design/F5bZSFNEkdl4ck008wi50A/UI-Design?node-id=47-14&m=dev
+
 ## Frontend
 
 The frontend was fully developed using React and TypeScript, with styled components for each screen, featuring fully responsive layouts for desktop. It includes route management, global styles, access control, and integrations throughout the entire application.
