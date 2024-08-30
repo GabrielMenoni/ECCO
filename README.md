@@ -25,7 +25,7 @@ In the Backend, an API structure was used to mediate database information with t
 # How to run the backend
 To install the project, simply clone the repository and in the backend directory use the npm install command.
 
-# Running locally
+## Running locally
 
 - Running with a local database in a container
 
@@ -41,7 +41,7 @@ To install the project, simply clone the repository and in the backend directory
 
     It is necessary to create a .env file in the src directory and add the information based on the .env.example file
 
-# Accessing the application
+## Accessing the application
 After the correct configuration of the .env file, in which it is necessary that the parameter related to the database must be correctly filled in. Access the URL
 http://localhost:3000/users
 
