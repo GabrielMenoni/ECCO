@@ -13,7 +13,8 @@ The frontend was fully developed using React and TypeScript, with styled compone
 
 ## Backend
 
---
+In the Backend, an API structure was used to mediate database information with the Frontend part. For this to work, we used the Fastify framework to create and direct routes, as well as the use of the Prisma ORM to describe database relationships. And all of this was used with TypeScript, which was extremely important for data typing.
+
 
 # How to run the frontend
 1. Navigate to ECCO\frontend
@@ -22,5 +23,26 @@ The frontend was fully developed using React and TypeScript, with styled compone
 4. Site will run on localhost:5173 by default
 
 # How to run the backend
+To install the project, simply clone the repository and in the backend directory use the npm install command.
+
+# Running locally
+
+- Running with a local database in a container
+
+    docker compose up -d api-solid-pg -> Will run the database in a Docker container.
+
+    docker compose stop db-dev --> Ends the execution of the container with Docker.
+
+- Running the application
+
+    npm dev -> Runs the application.
+
+- Running the application with the database
+
+    It is necessary to create a .env file in the src directory and add the information based on the .env.example file
+
+# Accessing the application
+After the correct configuration of the .env file, in which it is necessary that the parameter related to the database must be correctly filled in. Access the URL
+http://localhost:3000/users
 
 ![image](https://github.com/user-attachments/assets/2dc3847d-65e7-41d9-9798-72839e3625b4)
